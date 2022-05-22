@@ -1,0 +1,20 @@
+para poder contar las filas y columnas uno por uno  (un archivo por un 
+archivo) de la carpeta Saavedra2013 se utilizaron los siguentes comandos
+#Columnas
+echo "Numero de Columnas"
+head -n1 n1.txt | grep -o " " | wc -l
+#Filas
+echo "Numero de Filas"
+cut -d " " -f 1 n1.txt | wc -l
+
+Para contra las filas y columnas de todo el archivo de Saavedra2013, se 
+tuvo demaciados inconvenientes debiado a la marca de la lapto, pero al 
+final se logro con los siguientes comando
+echo "n$1.txt"
+#Columnas
+    echo "Numero de Columnas"
+head -n 1 n$1.txt | sort| wc -c
+#Filas
+echo "Numero de Filas"
+    cut -d " " -f 1 n$1.txt | wc -l 
+   
